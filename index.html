@@ -5,20 +5,23 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Luck</title>
-        <meta name="description" content="">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <meta name="description" content="Guess a random number between 0 and 20">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 class="header">Guess a random number between 0 and 20</h1>
-        <div class="container center">
-            <h1 class="answer" id="correctAnswerHeader">Guess</h1>
-            <div class="buttons">
-                <button class="increase" id="guessIncrease">+1</button>
-                <button class="decrease" id="guessDecrease">-1</button>
-                <button class="guess" id="guess">Guess</button>
+        <div class="wrapper">
+            <h1 class="header">Guess a random number between 0 and 20</h1>
+            <div class="container">
+                <h1 class="answer | poppins-black" id="correctAnswerHeader">Good luck!</h1>
+                <div class="buttons">
+                    <button class="increase | normalbtn poppins-bold" id="guessIncrease">+1</button>
+                    <button class="decrease | normalbtn poppins-bold" id="guessDecrease">-1</button>
+                    <button class="guess | poppins-bold" id="guess">Guess</button>
+                </div>
+                <h1 class="counter | poppins-black" id="counter">0</h1>
             </div>
-            <h1 class="counter" id="counter">0</h1>
         </div>
 
         <script src="main.js" async defer></script>

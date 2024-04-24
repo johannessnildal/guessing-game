@@ -1,8 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
 body {
-    margin: 0;
-    padding: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Styling */
+
+body {
     background-color: rgba(20, 0, 0);
     text-align: center;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .center {
@@ -12,36 +86,94 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        display: none;
+    }  
+}
 .header {
+    display: block;
     color: white;
-    position: relative;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    color: rgb(180, 60, 60);
 }
 
 .container {
     background-color: rgb(30, 0, 0);
     border: solid rgba(50,0,0,20%);
     color: white;
-    width: 350px;
+    width: 450px;
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .buttons {
+    padding-top: 30px;
+    
     button{
         background-color: white;
         border: none;
+        color: rgba(20, 0, 0);
         padding-inline: 30px;
         padding-block: 10px;
         border-radius: 5px;
         transition-duration: 0.3s;
         cursor: pointer;
     }
+    .guess {
+        background-color: rgba(255,255,255,50%)
+    }
 }
 
-.buttons button:hover {
+.normalbtn:hover {
     opacity: 50%;
     transition-duration: 0.3s;
 }
+
+.guess:hover {
+    background-color: rgb(180, 60, 60);
+    transition-duration: 0.3s;
+}
+
+/* Utility classes */
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
