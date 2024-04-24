@@ -7,7 +7,7 @@ var correctAnswerHeader = document.getElementById("correctAnswerHeader")
 var guess = document.getElementById("guess")
 
 // The correct number that you will have to guess. Random and between 0-20
-var correctNumber = Math.round(Math.random()*20);
+var correctNumber = Math.round(Math.random()*20)
 
 // Initialize counter value
 var counterValue = 0;
@@ -41,7 +41,7 @@ guess.addEventListener("click", function() {
     } else {
         correctAnswerHeader.textContent = "Wrong guess. Try again.";
     }
-});
+})
 
 
 
